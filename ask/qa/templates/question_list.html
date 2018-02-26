@@ -5,12 +5,12 @@
     <title>Question List</title>
 </head>
 <body>
-    <ul>
-        {% for i in paginator.page_range %}
+    <nav><ul>
+        {% for i in questions %}
         <li>
-            <a href="{{ paginator.baseurl }}{{ i }}">{{ questions[{{ i }}] }}</a>
+            <a href="{{ paginator.baseurl }}{{ i.id }}">{{ i.title }}</a>
         </li>
         {% endfor %}
-    </ul>
+    </ul></nav>
 </body>
 </html>

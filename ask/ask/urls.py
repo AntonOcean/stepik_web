@@ -19,11 +19,11 @@ from qa.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^(?P<page>\d+)$', quetions_list),
+    url(r'^$', questions_list),
     url(r'^login/', test),
     url(r'^signup/', test),
-    url(r'^question/\d+', test),
+    url(r'^question/(?P<id>\d+)/$', question),
     url(r'^ask/', test),
-    url(r'^popular/', test),
+    url(r'^popular/', popular_list),
     url(r'^new/', test),
 ]
