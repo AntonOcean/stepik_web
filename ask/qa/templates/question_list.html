@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question List</title>
+</head>
+<body>
+    <ul>
+        {% for i in paginator.page_range %}
+        <li>
+            <a href="{{ paginator.baseurl }}{{ i }}">{{ questions[{{ i }}] }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
