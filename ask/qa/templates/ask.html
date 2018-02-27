@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ask form</title>
+</head>
+<body>
+    <form method="post" action="/ask/">
+        {% csrf_token %}
+        {{ form.as_table }}
+        <div>
+            <button type="submit">Сохранить</button>
+        </div>
+    </form>
+</body>
+</html>
