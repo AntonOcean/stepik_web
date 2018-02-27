@@ -8,12 +8,19 @@
     <h4>{{ title }}</h4>
     <p>{{ text }}</p>
     <div>Ответы</div>
-    <p><ul>
+    <ul>
         {% for i in answers %}
         <li>
             {{ i.text }}
         </li>
         {% endfor %}
-    </p></ul>
+    </ul>
+    <form method="post" action="{{ question.get_url }}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>
+            <button type="submit">Сохранить</button>
+        </div>
+    </form>
 </body>
 </html>
