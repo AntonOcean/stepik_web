@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ask form</title>
+    <title>Signup</title>
 </head>
 <body>
-    {{ author }}
-    <form method="post" action="/ask/">
+    <form method="post" action="/signup/">
         {% csrf_token %}
         {{ form.as_p }}
         <div>

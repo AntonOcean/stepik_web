@@ -20,8 +20,8 @@ from qa.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', questions_list),
-    url(r'^login/', test),
-    url(r'^signup/', test),
+    url(r'^login/', loginup),
+    url(r'^signup/', signup),
     url(r'^question/(?P<id>\d+)/$', question),
     url(r'^ask/', question_add),
     url(r'^popular/', popular_list),
