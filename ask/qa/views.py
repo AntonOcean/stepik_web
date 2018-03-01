@@ -76,6 +76,7 @@ def signup(request):
         form = SignupForm(request.POST)
         if form.is_valid():
             form.save()
+            login(request, authenticate(username=request.POST.get('username'), password=request.POST.get('password')))
             return HttpResponseRedirect('/')
     else:
         form = SignupForm()
