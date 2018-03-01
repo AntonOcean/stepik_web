@@ -94,7 +94,7 @@ def loginup(request):
             response = HttpResponseRedirect('/')
             return response
         else:
-            error = 'Ошибка'
+            error = 'Error'
             form = LoginForm()
     else:
         form = LoginForm()

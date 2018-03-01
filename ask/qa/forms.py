@@ -37,7 +37,7 @@ class SignupForm(forms.Form):
     def clean(self):
         return self.cleaned_data
     def save(self):
-        user = User.objects.create_user(**self.cleaned_data) # хешируем пароль
+        user = User.objects.create_user(**self.cleaned_data)
         user.save()
         return user
 
